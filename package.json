@@ -1,0 +1,7 @@
+{
+  "name": "@aashij/npm-test",
+  "repository": {
+		"type": "git",
+		"url": "git+https://github.com/aashij/npm-test.git"
+	}
+}
