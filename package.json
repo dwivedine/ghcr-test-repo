@@ -4,7 +4,7 @@
     "description": "Test npm package",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/aashij/npm-test.git"
+        "url": "https://github.com/aashij/ghcr-test-repo"
     },
     "author": {
         "name": "aashij",
