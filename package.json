@@ -1,6 +1,6 @@
 {
     "name": "@aashij/npm-test",
-    "version": "2.2.0",
+    "version": "2.3.0",
     "description": "Test npm package",
     "repository": {
         "type": "git",
