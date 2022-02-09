@@ -1,0 +1,19 @@
+name: Pull private package from public Repo
+on: push
+
+permissions:
+ packages: read
+
+jobs:
+ all:
+  runs-on: ubuntu-latest
+  
+  steps:
+   - name: Login to GitHub container Registry
+     run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+   - name: List the image 
+     run: docker image ls
+   - name: Pull the image from the registry
+     run: docker pull ghcr.io/aashij/ubuntu:latest
+   - name: List the image 
+     run: docker image ls | grep ubuntu
