@@ -1,4 +1,4 @@
-name: Pull ubuntu package
+name: Pull ubuntu package (public)
 on: push
 
 permissions:
