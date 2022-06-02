@@ -1,0 +1,15 @@
+name: Test ansible
+on:
+  workflow_dispatch:
+  push:
+    branches: [ test ]
+    
+jobs:
+ all:
+  runs-on: ubuntu-latest
+  
+  steps:
+   - name: Install ansible
+     run: pip install ansible
+   - name: check playbook
+     run: ansible-playbook -h
