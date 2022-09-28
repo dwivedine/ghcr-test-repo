@@ -1,0 +1,21 @@
+name: Push container package
+on: push
+
+permissions:
+ packages: read
+
+jobs:
+ all:
+  runs-on: ubuntu-latest
+  
+  steps:
+   - name: Login to GitHub container Registry
+     run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+   - name: Pull centos 
+     run: docker pull centos
+   - name: Tag image
+     run: docker tag centos ghcr.io/aashij/centos-actions
+   - name: Push image
+     run: docker push ghcr.io/aashij/centos-actions
+   - name: List the image 
+     run: docker image ls | grep centos-actions
