@@ -1,5 +1,5 @@
 {
-    "name": "@aashij/npm-test",
+    "name": "@aashij/action-npm",
     "version": "2.3.0",
     "description": "Test npm package",
     "repository": {
