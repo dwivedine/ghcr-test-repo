@@ -34,12 +34,12 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ github.token }}
          
-      - name: Run list version with user PAT
-        run: gh api /users/${{ github.repository_owner }}/packages/container/testpkg-w/versions
-        env:
-          GITHUB_TOKEN: ${{ secrets.MY_PAT }}
+#      - name: Run list version with user PAT
+ #       run: gh api /users/${{ github.repository_owner }}/packages/container/testpkg-w/versions
+  #      env:
+  #        GITHUB_TOKEN: ${{ secrets.MY_PAT }}
 
       - name: Run list version with GITHUB_TOKEN
         run: gh api /users/${{ github.repository_owner }}/packages/container/testpkg-w/versions
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
